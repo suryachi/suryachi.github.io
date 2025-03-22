@@ -56,6 +56,10 @@ footer {
     font-size: 0.9em;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Dark Mode Base */
 body.dark-mode {
     background: #1e1e1e;
