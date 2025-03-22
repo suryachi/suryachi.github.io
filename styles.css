@@ -1,0 +1,193 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styling */
+section {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50;
+    color: #ecf0f1;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Dark Mode Base */
+body.dark-mode {
+    background: #1e1e1e;
+    color: #f4f4f4;
+}
+
+/* Dark Mode Sections */
+body.dark-mode section {
+    background: #2c2c2c;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Dark Mode Header and Footer */
+body.dark-mode header,
+body.dark-mode footer {
+    background: #121212;
+    color: #f4f4f4;
+}
+
+/* Dark Mode Links */
+body.dark-mode nav a {
+    color: #f4f4f4;
+}
+
+body.dark-mode #dark-mode-toggle {
+    background: #444;
+    color: #f4f4f4;
+}
+
+/* Smooth transition for background and text color changes */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header, footer {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Default link color */
+nav a {
+    color: #ecf0f1;  /* Light color for unvisited links */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+/* Visited link color */
+nav a:visited {
+    color: #8e44ad;  /* Purple color for visited links */
+}
+
+/* Link hover effect */
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Dark Mode Transitions */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #121212;
+    color: #f4f4f4;
+}
+
+body.dark-mode section {
+    background-color: #2c2c2c;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Button Styles */
+#dark-mode-toggle {
+    padding: 5px 10px;  /* Smaller padding */
+    font-size: 14px;  /* Smaller text */
+    background-color: #ecf0f1;  /* Light background color */
+    color: #333;  /* Dark text color */
+    border: none;
+    border-radius: 25px;  /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;  /* Smooth transition */
+    
+    /* Position the button at the top right corner */
+    position: absolute;
+    top: 20px;  /* Distance from the top of the page */
+    right: 20px;  /* Distance from the right side */
+}
+
+/* Button Hover Effect */
+#dark-mode-toggle:hover {
+    background-color: #bdc3c7;  /* Slightly darker background on hover */
+    color: #fff;  /* Light text color on hover */
+}
+
+/* Button Active (when clicked) */
+#dark-mode-toggle:active {
+    background-color: #95a5a6;  /* Even darker background when clicked */
+    transform: scale(0.98);  /* Slight shrink effect on click */
+}
+
+/* Dark Mode Button Styles */
+body.dark-mode #dark-mode-toggle {
+    background-color: #333;  /* Dark background in dark mode */
+    color: #ecf0f1;  /* Light text color in dark mode */
+}
+
+/* Button Hover in Dark Mode */
+body.dark-mode #dark-mode-toggle:hover {
+    background-color: #444;  /* Darker background on hover in dark mode */
+}
+
+/* body {
+    background: linear-gradient(135deg, #6e7bff, #8a2be2, #ff6f61);
+    background-size: 300% 300%;
+    animation: gradient-animation 6s ease infinite;
+} */
+
+/* Smoothly animate the gradient */
+/* @keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+} */
