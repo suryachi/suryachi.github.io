@@ -1,50 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Surya's Website">
-    <title>Surya Chinnappa</title>
-</headd>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surya Chinnappa — Linguistics & Cognitive Science</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+</head>
 <body>
-    <script src="script.js" defer></script>
-    <header>
-        <h1>Surya Chinnappa</h1>
-        <nav>
-            <a href="#about">About</a> |
-            <a href="#cv">Résumé</a> |
-            <a href="#projects">Projects</a> |
-            <a href="#contact">Contact</a>
-        </nav>
-        <button id="dark-mode-toggle">🌙 Dark Mode</button>
-    </header>
 
-    <section id="about">
-        <h2>Linguist, etc. @UChicago</h2>
-        <p>Hello! My name is Surya Chinnappa. I am an undergraduate at the University of Chicago pursuing a degree in Linguistics and Cognitive Science, researching with APEX Lab in the Department of Psychology.
-            You have found my unfinished website! More updates will follow as there are updates to be made.
-            Outside of academia, I enjoy music performance and composition, origami, calligraphy, and a host of other things.
+  <!-- Grain overlay -->
+  <div class="grain"></div>
+
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar">
+    <div class="nav-logo">
+      <span class="mono">~/surya-chinnappa</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link active" data-section="about"><span class="nav-index mono">00</span>About</a></li>
+      <li><a href="#research" class="nav-link" data-section="research"><span class="nav-index mono">01</span>Research</a></li>
+      <li><a href="#publications" class="nav-link" data-section="publications"><span class="nav-index mono">02</span>Publications</a></li>
+      <li><a href="#cv" class="nav-link" data-section="cv"><span class="nav-index mono">03</span>CV</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact"><span class="nav-index mono">04</span>Contact</a></li>
+    </ul>
+    <div class="nav-footer">
+      <div class="social-links">
+        <a href="https://github.com/" target="_blank" class="social-link mono">gh</a>
+        <a href="https://scholar.google.com/" target="_blank" class="social-link mono">gs</a>
+        <a href="https://twitter.com/" target="_blank" class="social-link mono">tw</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="section section--about">
+      <div class="section-header">
+        <span class="section-tag mono">section_00</span>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h1 class="display-name">Surya<br /><em>Chinnappa</em></h1>
+          <div class="about-role">
+            <span class="role-badge mono">BA, University of Chicago</span>
+            <span class="role-dept">Linguistics &amp; Cognitive Science</span>
+          </div>
+          <p class="about-bio">
+            I study language as both a cognitive phenomenon and a computational system — attending to the spaces where formal structure meets human meaning-making. My work sits at the intersection of <em>linguistic theory</em>, <em>cognitive science</em>, and <em>natural language processing</em>.
+          </p>
+          <p class="about-bio">
+            I am broadly interested in how neural language models represent and deviate from human-like linguistic knowledge, what this reveals about the nature of language itself, and what it means to understand language at all.
+          </p>
+          <div class="about-affil">
+            <span class="mono affil-label">affil.</span>
+            <span>University Name &mdash; Advisor: <a href="#" class="inline-link">Prof. Name</a></span>
+          </div>
+        </div>
+        <div class="about-photo-col">
+          <div class="photo-frame">
+            <div class="photo-placeholder">
+              <!-- Replace with: <img src="photo.jpg" alt="Jane Doe" /> -->
+              <div class="photo-initials">JD</div>
+            </div>
+            <div class="photo-caption mono">suryachinnappa [at] uchicago [dot] edu</div>
+          </div>
+          <div class="keyword-cloud">
+            <span class="keyword">semantics</span>
+            <span class="keyword">pragmatics</span>
+            <span class="keyword">psycholinguistics</span>
+            <span class="keyword mono">NLP</span>
+            <span class="keyword">embodied cognition</span>
+            <span class="keyword mono">conceptualization</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="cv">
-        <h2>Résumé</h2>
-        <p>View my résumé <a href="assets/Academic Resume - Surya C.pdf">here</a></p>
+    <!-- ========== RESEARCH ========== -->
+    <section id="research" class="section section--research">
+      <div class="section-header">
+        <span class="section-tag mono">section_01</span>
+        <h2 class="section-title">Research</h2>
+      </div>
+      <p class="section-intro">
+        My research spans three interlocking threads, each approaching language from a different angle of inquiry.
+      </p>
+      <div class="research-threads">
+
+        <div class="thread" data-index="01">
+          <div class="thread-header">
+            <span class="thread-num mono">—01</span>
+            <h3 class="thread-title">Linguistic Structure in Neural Models</h3>
+          </div>
+          <p class="thread-desc">
+            I probe large language models for evidence of syntactic and semantic representations, asking whether gradient-descent systems rediscover the categorical distinctions posited by linguistic theory. This work uses behavioral probing, representational similarity analysis, and targeted minimal-pair evaluations.
+          </p>
+          <div class="thread-methods">
+            <span class="method-tag mono">probing classifiers</span>
+            <span class="method-tag mono">RSA</span>
+            <span class="method-tag mono">minimal pairs</span>
+          </div>
+        </div>
+
+        <div class="thread" data-index="02">
+          <div class="thread-header">
+            <span class="thread-num mono">—02</span>
+            <h3 class="thread-title">Pragmatics &amp; Discourse Grounding</h3>
+          </div>
+          <p class="thread-desc">
+            I investigate how speakers coordinate on meaning beyond the literal: implicature, common ground, reference resolution. I am particularly interested in whether current NLP systems exhibit or merely simulate pragmatic competence, and what the difference between those cases might mean.
+          </p>
+          <div class="thread-methods">
+            <span class="method-tag mono">RST</span>
+            <span class="method-tag mono">annotation studies</span>
+            <span class="method-tag mono">behavioral exps.</span>
+          </div>
+        </div>
+
+        <div class="thread" data-index="03">
+          <div class="thread-header">
+            <span class="thread-num mono">—03</span>
+            <h3 class="thread-title">Cognitive Plausibility of Language Models</h3>
+          </div>
+          <p class="thread-desc">
+            Bridging computational linguistics and cognitive science, I examine the degree to which language models constitute credible process models of human language processing — and the theoretical implications when they succeed or fail.
+          </p>
+          <div class="thread-methods">
+            <span class="method-tag mono">eye-tracking</span>
+            <span class="method-tag mono">surprisal theory</span>
+            <span class="method-tag mono">fMRI alignment</span>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>To be built!</p>
+    <!-- ========== PUBLICATIONS ========== -->
+    <section id="publications" class="section section--publications">
+      <div class="section-header">
+        <span class="section-tag mono">section_02</span>
+        <h2 class="section-title">Publications</h2>
+      </div>
+      <div class="pub-filter">
+        <button class="filter-btn active mono" data-filter="all">all</button>
+        <button class="filter-btn mono" data-filter="conference">conference</button>
+        <button class="filter-btn mono" data-filter="journal">journal</button>
+        <button class="filter-btn mono" data-filter="preprint">preprint</button>
+      </div>
+      <div class="pub-list">
+
+        <div class="pub-item" data-type="conference">
+          <div class="pub-year mono">2024</div>
+          <div class="pub-body">
+            <h4 class="pub-title">Do Transformers Parse? Probing Syntactic Hierarchies in Large Language Models</h4>
+            <p class="pub-authors">Doe, J., Smith, A., &amp; Lee, C.</p>
+            <p class="pub-venue mono">ACL 2024 &bull; Main Conference</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link mono">paper</a>
+              <a href="#" class="pub-link mono">code</a>
+              <a href="#" class="pub-link mono">poster</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-type="conference">
+          <div class="pub-year mono">2024</div>
+          <div class="pub-body">
+            <h4 class="pub-title">Implicature Without Understanding: A Behavioral Study of GPT-4</h4>
+            <p class="pub-authors">Doe, J. &amp; Patel, R.</p>
+            <p class="pub-venue mono">EMNLP 2024 &bull; Findings</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link mono">paper</a>
+              <a href="#" class="pub-link mono">data</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-type="preprint">
+          <div class="pub-year mono">2025</div>
+          <div class="pub-body">
+            <h4 class="pub-title">Surprisal and Reading Times Revisited: A Large-Scale Corpus Analysis</h4>
+            <p class="pub-authors">Doe, J., Chen, M., &amp; Kim, S.</p>
+            <p class="pub-venue mono">arXiv preprint &bull; Under review</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link mono">preprint</a>
+              <a href="#" class="pub-link mono">code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item" data-type="journal">
+          <div class="pub-year mono">2023</div>
+          <div class="pub-body">
+            <h4 class="pub-title">Common Ground in Human-Computer Dialogue: An Empirical Account</h4>
+            <p class="pub-authors">Doe, J. &amp; Advisor, P.</p>
+            <p class="pub-venue mono">Cognition &bull; Vol. 241</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link mono">paper</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to email me for any and all inquiries:</p>
-        <p>Email: suryachinnappa [at] uchicago [dot] edu</p>
+    <!-- ========== CV ========== -->
+    <section id="cv" class="section section--cv">
+      <div class="section-header">
+        <span class="section-tag mono">section_03</span>
+        <h2 class="section-title">CV</h2>
+      </div>
+
+      <div class="cv-grid">
+        <div class="cv-block">
+          <h3 class="cv-block-title mono">education</h3>
+          <div class="cv-entry">
+            <span class="cv-year mono">2024—</span>
+            <div class="cv-entry-body">
+              <strong>PhD, Linguistics &amp; Cognitive Science</strong>
+              <span class="cv-inst">University Name</span>
+            </div>
+          </div>
+          <div class="cv-entry">
+            <span class="cv-year mono">2020—24</span>
+            <div class="cv-entry-body">
+              <strong>BA, Linguistics &amp; Computer Science</strong>
+              <span class="cv-inst">Undergraduate University</span>
+              <span class="cv-note mono">summa cum laude</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cv-block">
+          <h3 class="cv-block-title mono">experience</h3>
+          <div class="cv-entry">
+            <span class="cv-year mono">2023</span>
+            <div class="cv-entry-body">
+              <strong>Research Intern</strong>
+              <span class="cv-inst">Industry Research Lab</span>
+              <span class="cv-note">NLU team — worked on semantic parsing</span>
+            </div>
+          </div>
+          <div class="cv-entry">
+            <span class="cv-year mono">2022—24</span>
+            <div class="cv-entry-body">
+              <strong>Undergraduate Research Assistant</strong>
+              <span class="cv-inst">Cognitive Language Lab</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cv-block">
+          <h3 class="cv-block-title mono">awards</h3>
+          <div class="cv-entry">
+            <span class="cv-year mono">2024</span>
+            <div class="cv-entry-body">
+              <strong>NSF Graduate Research Fellowship</strong>
+            </div>
+          </div>
+          <div class="cv-entry">
+            <span class="cv-year mono">2024</span>
+            <div class="cv-entry-body">
+              <strong>Outstanding Undergraduate Thesis Award</strong>
+              <span class="cv-inst">Department of Linguistics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cv-block">
+          <h3 class="cv-block-title mono">teaching</h3>
+          <div class="cv-entry">
+            <span class="cv-year mono">2025</span>
+            <div class="cv-entry-body">
+              <strong>Teaching Assistant — Introduction to Syntax</strong>
+              <span class="cv-inst">University Name</span>
+            </div>
+          </div>
+          <div class="cv-entry">
+            <span class="cv-year mono">2025</span>
+            <div class="cv-entry-body">
+              <strong>Guest Lecturer — Computational Pragmatics</strong>
+              <span class="cv-inst">University Name</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-download">
+        <a href="cv.pdf" class="download-btn" download>
+          <span class="mono">download full cv</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+      </div>
     </section>
 
-    <footer>
-        <p>© 2025 Surya Chinnappa. All Rights Reserved.</p>
-    </footer>
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section section--contact">
+      <div class="section-header">
+        <span class="section-tag mono">section_04</span>
+        <h2 class="section-title">Contact</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-text">
+          <p>
+            I am always happy to discuss research, potential collaborations, or questions at the intersection of language, mind, and machine. Feel free to reach out.
+          </p>
+          <div class="contact-details">
+            <div class="contact-row">
+              <span class="contact-label mono">email</span>
+              <a href="mailto:suryachinnappa@uchicago.edu" class="contact-value">suryachinnappa [at] uchicago [dot] edu</a>
+            </div>
+            <div class="contact-row">
+              <span class="contact-label mono">office</span>
+              <span class="contact-value">Building Name, Room 000<br/>University Name</span>
+            </div>
+            <div class="contact-row">
+              <span class="contact-label mono">github</span>
+              <a href="https://github.com/" class="contact-value" target="_blank">github.com/suryachi</a>
+            </div>
+            <div class="contact-row">
+              <span class="contact-label mono">scholar</span>
+              <a href="https://scholar.google.com/" class="contact-value" target="_blank">Google Scholar</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-decoration">
+          <div class="terminal-block">
+            <div class="terminal-header">
+              <span class="t-dot"></span>
+              <span class="t-dot"></span>
+              <span class="t-dot"></span>
+            </div>
+            <div class="terminal-body mono" id="terminal-text"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
