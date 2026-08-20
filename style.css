@@ -321,6 +321,23 @@ a {
   color: var(--ink);
 }
 
+.about-list {
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+  line-height: 1.8;
+  max-width: 580px;
+  margin-bottom: 16px;
+  list-style-position: inside; /* keeps bullets flush with the left margin instead of indented */
+  padding-left: 0;
+  margin-left: 0;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.5s forwards;
+}
+
+.about-list li {
+  margin-bottom: 4px;
+}
+
 .about-affil {
   display: flex;
   align-items: baseline;
@@ -689,9 +706,9 @@ a {
 }
 
 .cv-download {
-  margin-top: 48px;
-  padding-top: 32px;
-  border-top: 1px solid var(--rule);
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
 }
 
 .download-btn {
