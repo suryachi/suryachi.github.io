@@ -211,7 +211,7 @@ a {
 .section {
   padding: var(--section-pad) clamp(40px, 6vw, 80px);
   border-bottom: 1px solid var(--rule);
-  min-height: 100vh;
+  /* min-height: 100vh removed — was forcing large empty gaps on short sections */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -251,7 +251,7 @@ a {
    ============================================================ */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 280px;
+  grid-template-columns: 1fr; /* was "1fr 280px" — second column freed up since the photo col is commented out */
   gap: clamp(40px, 6vw, 80px);
   align-items: start;
 }
@@ -350,6 +350,7 @@ a {
 }
 
 /* Photo Column */
+/*
 .about-photo-col {
   opacity: 0;
   animation: fadeUp 0.8s ease 0.35s forwards;
@@ -403,6 +404,7 @@ a {
   color: var(--ink-light);
   letter-spacing: 0.02em;
 }
+*/
 
 /* Keyword Cloud */
 .keyword-cloud {
@@ -909,4 +911,3 @@ a.contact-value:hover {
     padding-left: 0;
   }
 }
-
